@@ -1,0 +1,56 @@
+.Card--list{
+    display: flex ;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+    margin: auto;
+    padding: 80px;
+    gap: 50px;
+    text-align: center;
+    
+}
+.card {
+  width: 220px;
+  font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0/12) 0 1px 8px;
+  border-radius: 0.5rem;
+  padding: 20px;
+  
+}
+body{
+  background-color: #83c5be;
+  background: fixed;
+  background-image: -moz-linear-gradient(#83c5be, #023047);
+}
+.card--car{
+  width: 50vh;
+  padding: 2vh 1vh;
+  border: 1px solid black;
+  border-radius: 1em;
+  box-shadow: rgb(0 0 0/12) 0 1px 8px;
+  background-color: #83c5be;
+  margin-left: 1.25em;
+  
+}
+.card--image {
+  width: 100%;
+  height: auto;
+  padding: 1vh 10vh;
+  /* margin-bottom: 9px; */
+}
+.card--text{
+  font-size: 1.25em;
+}
+.card--btn{
+  background-color: #eae2b7;
+  color: #023047;
+  border: none;
+  padding: .5em .75em;
+  border-radius: .30em;
+  box-shadow: rgb(0 0 0/12) 0 1px 4px;
+}
+.thumbs-wrapper.axis-vertical {
+  display: none;
+}

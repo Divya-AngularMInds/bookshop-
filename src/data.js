@@ -1,0 +1,97 @@
+export default [
+  {
+    id: 1,
+    name: "Fire and Blood",
+    author: "George R R Martin",
+    price: 400,
+    image1:
+      "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/91iMu22uEWL.jpg",
+    openSpot: 100,
+    image2:
+      "https://images-na.ssl-images-amazon.com/images/I/91vQcijgtML._AC_SY75_CR,0,0,75,75_.jpg",
+    image3:
+      "https://images-na.ssl-images-amazon.com/images/I/81G1p54l7gL._AC_SY75_CR,0,0,75,75_.jpg",
+    count: 1,
+  },
+  {
+    id: 2,
+    name: "The Kid Who Came From Space",
+    author: "Ross Welford",
+    price: 600,
+    image1: "https://images-na.ssl-images-amazon.com/images/I/81evNO+JD-L.jpg",
+    openSpot: 12,
+    image2: "https://images-na.ssl-images-amazon.com/images/I/818iUPBLSIL.jpg",
+    image3: "https://images-na.ssl-images-amazon.com/images/I/61UM5xCKaEL.jpg",
+    count: 1,
+  },
+  {
+    id: 3,
+    name: "The Grainy days in Madras",
+    author: "Janani",
+    price: 800,
+    image1: "https://images-na.ssl-images-amazon.com/images/I/91O7OBGhIEL.jpg",
+    openSpot: 10,
+    image2: "https://images-na.ssl-images-amazon.com/images/I/81pcUviChDL.jpg",
+    count: 1,
+  },
+  {
+    id: 4,
+    name: `Boys Don't Cry`,
+    author: "Meghna Pant",
+    price: 1200,
+    image1:
+      "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/61lyKm0SCtL.jpg",
+    openSpot: 199,
+    image2: "https://images-na.ssl-images-amazon.com/images/I/81pEeKAsDqL.jpg",
+    image3: "",
+    count: 1,
+  },
+  {
+    id: 5,
+    name: `Firekeeper`,
+    author: "Angeline Boulley",
+    price: 1000,
+    image1:
+      "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/91W+Oi2bDYS.jpg",
+    openSpot: 10,
+    image2: "",
+    image3: "",
+    count: 1,
+  },
+  {
+    id: 6,
+    name: `A Nation of Idiots `,
+    author: "Daksh Tyagi",
+    price: 1400,
+    image1:
+      "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/81KeOD++BBL.jpg",
+    openSpot: 0,
+    image2: "https://images-na.ssl-images-amazon.com/images/I/71ILhEUfP-L.jpg",
+    image3: "https://images-na.ssl-images-amazon.com/images/I/81W+-w19DFL.jpg",
+    count: 1,
+  },
+  {
+    id: 7,
+    name: `Tongue-in-Cheek: The Funny Side of Life`,
+    author: "Khyrunnisa A",
+    price: 1600,
+    image1:
+      "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/81anVXtS-5L.jpg",
+    openSpot: 100,
+    image2: "https://images-na.ssl-images-amazon.com/images/I/410QaBCvXVL.jpg",
+    image3: "",
+    count: 1,
+  },
+  {
+    id: 8,
+    name: `Written in the Stars`,
+    author: "Sofa Ghop",
+    price: 1600,
+    image1:
+      "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/51uwT1TLstL.jpg",
+    openSpot: 100,
+    image2: "https://images-na.ssl-images-amazon.com/images/I/81iChSMbnFS.jpg",
+    image3: "",
+    count: 1,
+  },
+];
