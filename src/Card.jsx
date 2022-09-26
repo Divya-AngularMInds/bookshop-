@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 // import Cart from "./Cart"
 export default function Cards(props) {
-  function add(prop) {
+  function add(props) {
     var temparr = JSON.parse(JSON.stringify(props.cart));
-    console.log(temparr);
-    if (temparr.find((i) => i.id === prop.id)) {
-      let newprop = { ...props, count: prop.count + 1 };
-      const { id, count, image1, image2, price, name, ...rest } = newprop;
-      let index = temparr.findIndex((i) => i.id === prop.id);
-      console.log(temparr[index]);
+
+    // console.log(temparr);
+    if (temparr && temparr.find((i) => i.id === props.id)) {
+      // let newprop = { ...props, count: props.count + 1 };
+      // const { id, count, image1, image2, price, name, ...rest } = newprop;
+      let index = temparr.findIndex((i) => i.id === props.id);
+      // console.log(temparr[index]);
       temparr[index].count = temparr[index].count + 1;
       // temparr.push({ id, count, image1, image2, price, name });
       props.setCart(temparr);
