@@ -12,6 +12,7 @@ export default [
     image3:
       "https://images-na.ssl-images-amazon.com/images/I/81G1p54l7gL._AC_SY75_CR,0,0,75,75_.jpg",
     count: 1,
+    show: true,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ export default [
     image2: "https://images-na.ssl-images-amazon.com/images/I/818iUPBLSIL.jpg",
     image3: "https://images-na.ssl-images-amazon.com/images/I/61UM5xCKaEL.jpg",
     count: 1,
+    show: true,
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ export default [
     openSpot: 10,
     image2: "https://images-na.ssl-images-amazon.com/images/I/81pcUviChDL.jpg",
     count: 1,
+    show: true,
   },
   {
     id: 4,
@@ -45,6 +48,7 @@ export default [
     image2: "https://images-na.ssl-images-amazon.com/images/I/81pEeKAsDqL.jpg",
     image3: "",
     count: 1,
+    show: true,
   },
   {
     id: 5,
@@ -57,6 +61,7 @@ export default [
     image2: "",
     image3: "",
     count: 1,
+    show: true,
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ export default [
     image2: "https://images-na.ssl-images-amazon.com/images/I/71ILhEUfP-L.jpg",
     image3: "https://images-na.ssl-images-amazon.com/images/I/81W+-w19DFL.jpg",
     count: 1,
+    show: true,
   },
   {
     id: 7,
@@ -81,6 +87,7 @@ export default [
     image2: "https://images-na.ssl-images-amazon.com/images/I/410QaBCvXVL.jpg",
     image3: "",
     count: 1,
+    show: true,
   },
   {
     id: 8,
@@ -93,5 +100,6 @@ export default [
     image2: "https://images-na.ssl-images-amazon.com/images/I/81iChSMbnFS.jpg",
     image3: "",
     count: 1,
+    show: true,
   },
 ];

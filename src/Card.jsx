@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 // import Cart from "./Cart"
@@ -13,18 +13,17 @@ export default function Cards(props) {
       let index = temparr.findIndex((i) => i.id === props.id);
       // console.log(temparr[index]);
       temparr[index].count = temparr[index].count + 1;
-      // temparr.push({ id, count, image1, image2, price, name });
       props.setCart(temparr);
     } else {
       const { id, count, image1, image2, price, name, ...rest } = props;
-      temparr.push({ id, count, image1, image2, price, name });
+      temparr.push({ id, count, image1, image2, price, name,});
       props.setCart(temparr);
     }
     // console.log(props.cart)
   }
   function remove(id, count) {
-    // let temparr = JSON.parse(JSON.stringify(props.cart));
-    let temparr = props.cart;
+    let temparr = JSON.parse(JSON.stringify(props.cart));
+    // let temparr = props.cart;
     let index = temparr.findIndex((i) => i.id === props.id);
 
     if (temparr[index].count === 1) {
@@ -34,9 +33,13 @@ export default function Cards(props) {
       // let newprop = { ...props, count: count - 1 };
 
       temparr[index].count = temparr[index].count - 1;
+      props.setCart(temparr);
+      console.log(props.cart[index].count);
+
     }
 
-    console.log(props.cart);
+    
+    
   }
   return (
     <div className="card--car">
@@ -60,15 +63,26 @@ export default function Cards(props) {
 
       <h3 className="card--text">{props.name}</h3>
       <h3 className="card--text">{props.price}</h3>
-      <div>
-        <button className="card--btn" onClick={() => add(props)}>
-          Add to Cart
-        </button>
-        <button
-          className="card--btn"
-          onClick={() => remove(props.id, props.count)}>
-          Remove from Cart
-        </button>
+      <div className="flex">
+        {props.cart.find((i) => i.id === props.id) ? (
+          <>
+            <button
+              className="card--btn"
+              onClick={() => remove(props.id, props.count)}>
+              -
+            </button>
+            <button className="card--btn">
+              {props.cart[props.cart.findIndex((i) => i.id === props.id)].count}
+            </button>
+            <button className="card--btn" onClick={() => add(props)}>
+              +
+            </button>
+          </>
+        ) : (
+          <button className="card--btn" onClick={() => add(props)}>
+            Add to Cart
+          </button>
+        )}
       </div>
     </div>
   );
