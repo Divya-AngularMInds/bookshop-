@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { cloneDeep } from "lodash";
 // import Cart from "./Cart"
 export default function Cards(props) {
   function add(props) {
-    var temparr = JSON.parse(JSON.stringify(props.cart));
+    // var temparr = JSON.parse(JSON.stringify(props.cart));
+    var temparr = cloneDeep(props.cart);
 
     // console.log(temparr);
     if (temparr && temparr.find((i) => i.id === props.id)) {
@@ -22,7 +24,8 @@ export default function Cards(props) {
     // console.log(props.cart)
   }
   function remove(id, count) {
-    let temparr = JSON.parse(JSON.stringify(props.cart));
+    // let temparr = JSON.parse(JSON.stringify(props.cart));
+    var temparr = cloneDeep(props.cart);
     // let temparr = props.cart;
     let index = temparr.findIndex((i) => i.id === props.id);
 
