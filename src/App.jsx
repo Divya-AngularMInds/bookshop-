@@ -7,6 +7,8 @@ import Cards from "./Card";
 import Cart from "./Cart";
 import Login from "./login";
 import { cloneDeep } from "lodash";
+import axios from "axios";
+import Register from "./register";
 function App() {
   const [cart, setCart] = useState(
     () => JSON.parse(localStorage.getItem("cart")) || []
@@ -16,6 +18,10 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
   console.log(cart);
+  useEffect(() => {
+    axios.get("https://6343b8fc2dadea1175abc989.mockapi.io/api/all/User")
+    .then((res) =>{console.log(res.data);})
+  })
   const cards = Data.map((item, index) => {
     return (
       <Cards
@@ -56,9 +62,7 @@ function App() {
           path="/"
           element={
             <>
-              
               <Login />
-              
             </>
           }
         />
@@ -67,7 +71,7 @@ function App() {
           element={
             <>
               <Navbar value={cart} />
-              
+
               <section className="Card--list">{cards}</section>
             </>
           }
@@ -75,6 +79,10 @@ function App() {
         <Route
           path="cart"
           element={<Cart cart={cart} setCart={setCart} handleClick={remove} />}
+        />
+        <Route
+          path="register"
+          element={<Register />}
         />
       </Routes>
     </BrowserRouter>

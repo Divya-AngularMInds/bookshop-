@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { cloneDeep } from "lodash";
+import axios from "axios";
 // import Cart from "./Cart"
 export default function Cards(props) {
+  const header = { "Access-Control-Allow-Origin": "*" };
   function add(props) {
     // var temparr = JSON.parse(JSON.stringify(props.cart));
     var temparr = cloneDeep(props.cart);
-
+;
     // console.log(temparr);
     if (temparr && temparr.find((i) => i.id === props.id)) {
       // let newprop = { ...props, count: props.count + 1 };
@@ -20,6 +22,8 @@ export default function Cards(props) {
       const { id, count, image1, image2, price, name, ...rest } = props;
       temparr.push({ id, count, image1, image2, price, name,});
       props.setCart(temparr);
+      axios.put("https://6343b8fc2dadea1175abc989.mockapi.io/api/all/User/2",
+        { props: props.cart } , header)
     }
     // console.log(props.cart)
   }
@@ -38,7 +42,11 @@ export default function Cards(props) {
       temparr[index].count = temparr[index].count - 1;
       props.setCart(temparr);
       console.log(props.cart[index].count);
-
+axios.put(
+  "https://6343b8fc2dadea1175abc989.mockapi.io/api/all/User/2",
+  { props: temparr} ,
+  header
+);
     }
 
     
