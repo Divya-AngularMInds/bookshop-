@@ -1,0 +1,19 @@
+.Card--list {
+    margin-top: 1rem;
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr) );
+    gap: .5em;
+}
+@media (min-width: 1018px ) {
+    .Card--list {
+            /* max-width: 100rem;
+            margin-inline: auto;
+            padding-inline: 2rem;
+            display: grid; */
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            /* gap: .5em; */
+        }
+}

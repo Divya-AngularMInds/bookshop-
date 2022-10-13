@@ -1,0 +1,61 @@
+.card {
+    box-shadow: rgb(0 0 0/12) 0 1px 8px;
+    border-radius: 0.5rem;
+    
+
+}
+
+
+
+.card--car {
+    
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 1vh;
+    border: 1px solid black;
+    border-radius: 1em;
+    box-shadow: rgb(0 0 0/12) 0 1px 8px;
+    background-color: #bde0fe;
+    margin-left: .5em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card--image {
+    /* width: 100%;
+    height: auto;
+    padding: 1vh 10vh; */
+    /* margin-bottom: 9px; */
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.card--text {
+    font-size: 1.25rem;
+}
+
+.card--btn {
+    background-color: #eae2b7;
+    color: #023047;
+    border: none;
+    padding: .5rem .75rem;
+    border-radius: .30rem;
+    margin: .25rem;
+
+}
+
+.card--btn:hover {
+    box-shadow: rgb(0 0 0/12) 0 1px 8px;
+}
+
+.thumbs-wrapper.axis-vertical {
+    display: none;
+}
+
+
+.carousel-status {
+    display: none;
+}
